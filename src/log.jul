@@ -1,0 +1,11 @@
+logFilePath = §TODO read from config/param§
+LogEntry = (Data: ObjectType) =>
+    (
+        createdAt: Date
+        data: Dictionary(Integer (type: Or(§insert§ §update§ §delete§) data: Data))
+    )
+log$ = createStream(LogEntry(Any))
+
+write = (data) =>
+    writeLine(logFilePath data.toString())
+    log$.push(data)

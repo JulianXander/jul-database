@@ -1,0 +1,5 @@
+(log$) = import(§log§)
+
+log$.subscribe((entry) =>
+    # TODO
+)
